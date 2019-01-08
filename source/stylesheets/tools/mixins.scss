@@ -1,0 +1,40 @@
+/* FONT-FAMILY ----------------------------------------------------------- */
+@mixin font-family($font-variant: regular, $font-name: main) {
+  @if map-has-key($font-family-prefix, $font-name) and map-has-key($font-family-suffix, $font-variant) {
+    font-family: map-get($font-family-prefix, $font-name)+map-get($font-family-suffix, $font-variant);
+  }
+}
+
+/* FONT-SIZE ----------------------------------------------------------- */
+@mixin font-size($font-size: base) {
+  @if map-has-key($font-sizes, $font-size) {
+    font-size: map-get($font-sizes, $font-size);
+  }
+}
+
+/* FLUID-TYPE ----------------------------------------------------------- */
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $modular: false, $scale: 1) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $modular == true {
+    $mod_1: $font-mod-scale-mobile * $scale;
+    $mod_2: $font-mod-scale-desktop * $scale;
+    $min-font-size: $mod_1 * $min_font-size;
+    $max-font-size: $mod_2 * $min_font-size;
+  }
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Settings
+$shifting-colors: true;
+$padding: map-get($gutters, xl);
+
+@if $shifting-colors == true {
+  body > section.section {
+    background-color: $color-bg-primary;
+    &:nth-of-type(2n) {
+      background-color: $color-bg-secondary;
+    }
+  }
+}
+
+section.section {
+  lost-center: $width-page;
+
+  &--contained {
+    lost-center: $width-contained;
+  }
+
+  &--padded {
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+}

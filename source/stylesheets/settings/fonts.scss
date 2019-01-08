@@ -1,0 +1,69 @@
+$font-body-min-size: 12px;
+$font-body-max-size: 18px;
+$font-heading-min-size: 18px;
+$font-heading-max-size: 48px;
+$font-mod-scale-desktop: 1.4;
+$font-mod-scale-mobile: 1.2;
+
+$font-family-prefix: (
+  main: "gt_america",
+  alternative: "baskerville"
+);
+
+$font-family-suffix: (
+  regular: "_regular",
+  bold: "_bold",
+  italic: "_italic"
+);
+
+$font-sizes: (
+  heading-xl: rem(48),
+  heading-large: rem(36),
+  heading-medium: rem(24),
+  heading-small: rem(20),
+  heading-xs: rem(18),
+  body-large: rem(18),
+  body-medium: rem(16),
+  body-small: rem(14),
+  body-xs: rem(12)
+);
+
+@font-face {
+    font-family: 'baskerville_italic';
+    src: url('../../../fonts/librebaskerville-italic-webfont.eot');
+    src: url('../../../fonts/librebaskerville-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/librebaskerville-italic-webfont.woff2') format('woff2'),
+         url('../../../fonts/librebaskerville-italic-webfont.woff') format('woff'),
+         url('../../../fonts/librebaskerville-italic-webfont.ttf') format('truetype'),
+         url('../../../fonts/librebaskerville-italic-webfont.svg#libre_baskervilleitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'baskerville_regular';
+    src: url('../../../fonts/librebaskerville-regular-webfont.eot');
+    src: url('../../../fonts/librebaskerville-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/librebaskerville-regular-webfont.woff2') format('woff2'),
+         url('../../../fonts/librebaskerville-regular-webfont.woff') format('woff'),
+         url('../../../fonts/librebaskerville-regular-webfont.ttf') format('truetype'),
+         url('../../../fonts/librebaskerville-regular-webfont.svg#libre_baskervilleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_america_regular';
+    src: url('../../../fonts/gt-america-extended-regular-webfont.woff2') format('woff2'),
+         url('../../../fonts/gt-america-extended-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_america_bold';
+    src: url('../../../fonts/gt-america-expanded-bold-webfont.woff2') format('woff2'),
+         url('../../../fonts/gt-america-expanded-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,22 @@
+{
+  "short_name": "STRØM WORKS",
+  "name": "STRØM WORKS Website",
+  "icons": [
+    {
+      "src": "apple-touch-icon-60x60.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "apple-touch-icon-120x120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    }
+  ],
+  "start_url": "/"
+}

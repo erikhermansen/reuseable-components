@@ -1,0 +1,27 @@
+$min_width: $width-mobile;
+$max_width: $width-contained;
+$min_font: $font-heading-min-size;
+$max_font: $font-heading-max-size;
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-family(bold, main);
+}
+
+h1 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 2);
+}
+h2 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 1.8);
+}
+h3 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 1.6);
+}
+h4 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 1.4);
+}
+h5 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 1.2);
+}
+h6 {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, true, 1);
+}
